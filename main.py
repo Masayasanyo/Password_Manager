@@ -22,8 +22,6 @@ def find_password():
             messagebox.showinfo(title="Sorry", message="No details for the website exists.")
 
 
-
-
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -39,6 +37,8 @@ def generate_password():
 
     random_password = "".join(password_list)
     enter_pass.insert(0, random_password)
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def add():
     web_entered = enter_web.get()
@@ -73,9 +73,8 @@ def add():
                 enter_web.delete(0, 'end')
                 enter_pass.delete(0, 'end')
 
+
 # ---------------------------- UI SETUP ------------------------------- #
-
-
 def _from_rgb(rgb):
     return "#%02x%02x%02x" % rgb
 
